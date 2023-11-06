@@ -129,7 +129,7 @@ import androidx.compose.ui.unit.sp
         Divider(color = Color.Gray)
 
         Row(
-            //in order to work spaceAround needs to add next line fillMaxWidth
+            //in order to work spaceAround property needs to add next line fillMaxWidth
             horizontalArrangement = Arrangement.SpaceAround,
             modifier = Modifier.fillMaxWidth()
                 .padding(top = 30.dp)
