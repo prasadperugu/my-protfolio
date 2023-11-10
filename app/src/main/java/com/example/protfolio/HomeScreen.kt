@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
@@ -30,24 +31,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+    @Preview(showBackground = true)
     @Composable
     fun Protfilio(modifier: Modifier= Modifier) {
        val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxSize()
-
     ) {
         Card(
             modifier = Modifier
                 .background(Color.Red)
-
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 20.dp, bottom = 10.dp),
+                    .padding(top = 16.dp, bottom = 16.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -57,7 +56,7 @@ import androidx.compose.ui.unit.sp
                     //to proper 360 degree of image
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(170.dp)
+                        .size(80.dp)
                         .clip(CircleShape)
                 )
                 Text(
@@ -81,7 +80,11 @@ import androidx.compose.ui.unit.sp
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            Text(text = "Born", fontSize = 16.sp)
+            Text(text = "Born",
+                fontSize = 16.sp,
+                modifier = Modifier
+                    .requiredWidth(100.dp)
+            )
             Text(
                 text = "September 16, 1999(24 Years)",
                 fontSize = 16.sp,
@@ -95,7 +98,10 @@ import androidx.compose.ui.unit.sp
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            Text(text = "Birth Place", fontSize = 16.sp)
+            Text(text = "Birth Place", fontSize = 16.sp,
+                modifier = Modifier
+                    .requiredWidth(100.dp)
+            )
             Text(text = "Kumaradevam", fontSize = 16.sp, fontWeight = FontWeight.Medium,  modifier = Modifier.padding(start = 10.dp))
 
         }
@@ -105,7 +111,9 @@ import androidx.compose.ui.unit.sp
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            Text(text = "Nickname", fontSize = 16.sp)
+            Text(text = "Nickname", fontSize = 16.sp,
+                modifier = Modifier
+                    .requiredWidth(100.dp))
             Text(text = "Surendra", fontSize = 16.sp, fontWeight = FontWeight.Medium,  modifier = Modifier.padding(start = 10.dp))
 
         }
@@ -114,7 +122,9 @@ import androidx.compose.ui.unit.sp
             modifier = Modifier
                 .padding(10.dp)
         ) {
-            Text(text = "Profession", fontSize = 16.sp)
+            Text(text = "Profession", fontSize = 16.sp,
+                modifier = Modifier
+                    .requiredWidth(100.dp))
             Text(text = "Engineer", fontSize = 16.sp, fontWeight = FontWeight.Medium,  modifier = Modifier.padding(start = 10.dp))
 
         }
@@ -122,7 +132,9 @@ import androidx.compose.ui.unit.sp
         Row(
             modifier = Modifier.padding(10.dp)
         ) {
-            Text(text = "Role", fontSize = 16.sp)
+            Text(text = "Role", fontSize = 16.sp,
+                modifier = Modifier
+                    .requiredWidth(100.dp))
             Text(text = "Android Dev", fontSize = 16.sp, fontWeight = FontWeight.Medium,  modifier = Modifier.padding(start = 10.dp))
 
         }
